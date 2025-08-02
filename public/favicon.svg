@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Globe Grid -->
+  <circle cx="32" cy="32" r="30" stroke="#0055A5" stroke-width="2" fill="white" />
+
+  <!-- Latitude Lines -->
+  <path d="M32 2 Q 52 16 32 32 Q 12 48 32 62" stroke="#0055A5" stroke-width="1.5" fill="none" />
+  <path d="M32 2 Q 12 16 32 32 Q 52 48 32 62" stroke="#0055A5" stroke-width="1.5" fill="none" />
+
+  <!-- Longitude Lines -->
+  <ellipse cx="32" cy="32" rx="30" ry="12" stroke="#0055A5" stroke-width="1.5" fill="none" />
+  <ellipse cx="32" cy="32" rx="15" ry="6" stroke="#0055A5" stroke-width="1.5" fill="none" />
+
+  <!-- Letter A in the middle -->
+  <text x="26" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#C8090F">A</text>
+</svg>
