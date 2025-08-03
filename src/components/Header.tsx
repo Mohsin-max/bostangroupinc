@@ -15,10 +15,10 @@ const routes = [
     label: "PRODUCTS",
     subRoutes: [
       { href: "/seafood", label: "SEA FOOD" },
-      { href: "/poultry", label: "POULTRY" },
+      { href: "/poultry-products-list", label: "POULTRY" },
       { href: "/beef", label: "BEEF" },
       { href: "/lambgoat", label: "LAMB & GOAT" },
-      { href: "/foodpackaging", label: "Food-PACKAGING" },
+      { href: "/foodpackaging", label: "FOOD PACKAGING" },
     ],
   },
   { href: "/services", label: "SERVICES" },
@@ -29,7 +29,6 @@ const routes = [
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
-  const [isHovering, setIsHovering] = useState(false);
   const pathname = usePathname();
 
   const socialLinks = [
@@ -44,12 +43,8 @@ const Header = () => {
     setOpenSubMenu(null);
   }, [pathname]);
 
-  const handleDesktopHover = (route: typeof routes[0]) => {
-    if (route.subRoutes) setOpenSubMenu(route.href);
-  };
-
   return (
-    <header className="bg-white shadow-sm z-50" >
+    <header className="bg-white shadow-sm z-50">
       {/* Top Social Bar */}
       <div className="py-2 px-4" style={{ backgroundColor: '#0d413e' }}>
         <div className="container mx-auto flex justify-end items-center">
@@ -70,8 +65,8 @@ const Header = () => {
       {/* Main Navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo - Increased size */}
-          <div className="w-48 h-24 relative"> {/* Increased from w-32 h-16 */}
+          {/* Logo */}
+          <div className="w-48 h-24 relative">
             <Link href="/">
               <Image
                 src="/5x.png"
@@ -90,8 +85,8 @@ const Header = () => {
               <div
                 key={route.href}
                 className="relative group"
-                onMouseEnter={() => handleDesktopHover(route)}
-                onMouseLeave={() => setTimeout(() => setOpenSubMenu(null), 300)}
+                onMouseEnter={() => setOpenSubMenu(route.href)}
+                onMouseLeave={() => setOpenSubMenu(null)}
               >
                 <Link
                   href={route.href}
@@ -101,18 +96,15 @@ const Header = () => {
                 >
                   {route.label}
                 </Link>
-                
+
+                {/* Dropdown Menu */}
                 {route.subRoutes && openSubMenu === route.href && (
-                  <div 
-                    className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 mt-2"
-                    onMouseEnter={() => setOpenSubMenu(route.href)}
-                    onMouseLeave={() => setOpenSubMenu(null)}
-                  >
+                  <div className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 mt-1 z-50">
                     {route.subRoutes.map((subRoute) => (
                       <Link
                         key={subRoute.href}
                         href={subRoute.href}
-                        className={`block px-4 py-2 ${
+                        className={`block px-4 py-2 transition ${
                           pathname === subRoute.href 
                             ? 'text-[#115551] font-semibold' 
                             : 'text-gray-700 hover:bg-gray-100'
@@ -138,7 +130,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4" >
+          <div className="md:hidden mt-4 pb-4">
             {routes.map((route) => (
               <div key={route.href} className="py-2 border-b border-gray-200">
                 <div className="flex flex-col">

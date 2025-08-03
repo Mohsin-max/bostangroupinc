@@ -98,10 +98,10 @@ export default function SeafoodMenuPage() {
                 {product.variants.map((v, i) => (
                   <li key={i}>
                     <span className="font-medium">{v.size}</span> -{" "}
-                    <span>{v.origin}</span> -{" "}
-                    <span className="text-[#03468a] font-semibold">
+                    <span>{v.origin}</span>
+                    {/* <span className="text-[#03468a] font-semibold">
                       {v.price}
-                    </span>
+                    </span> */}
                   </li>
                 ))}
               </ul>
@@ -122,7 +122,7 @@ export default function SeafoodMenuPage() {
                     <tr>
                       <th className="p-2 text-left">Size</th>
                       <th className="p-2 text-left">Origin</th>
-                      <th className="p-2 text-left">Price</th>
+                      {/* <th className="p-2 text-left">Price</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -130,9 +130,9 @@ export default function SeafoodMenuPage() {
                       <tr key={index} className="border-t">
                         <td className="p-2 font-medium">{variant.size}</td>
                         <td className="p-2">{variant.origin}</td>
-                        <td className="p-2 text-[#03468a] font-semibold">
+                        {/* <td className="p-2 text-[#03468a] font-semibold">
                           {variant.price}
-                        </td>
+                        </td> */}
                       </tr>
                     ))}
                   </tbody>
