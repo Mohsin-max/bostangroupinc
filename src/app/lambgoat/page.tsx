@@ -103,6 +103,38 @@ export default function LambGoatMenu() {
               </tbody>
             </table>
           </div>
+
+          {/* New Cards Section */}
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
+            {/* Lamb Card */}
+            <div className="bg-blue-50 border border-[#03468a]/20 p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-bold text-[#03468a] mb-3">Lamb</h3>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                <li>Whole Lamb: A complete lamb carcass.</li>
+                <li>Lamb Leg: Can be bone-in or boneless.</li>
+                <li>Boneless Lamb Leg: Prepared for easy cooking.</li>
+                <li>Lamb Shoulder: Can be bone-in or boneless.</li>
+                <li>Boneless Lamb Shoulder: Prepared for easy cooking.</li>
+                <li>Lamb Shoulder Tubes: Boneless lamb shoulder rolled or tied.</li>
+                <li>Lamb Chops: Various cuts from the loin, rib, or shoulder.</li>
+                <li>Lamb Rack: Rib portion of the lamb.</li>
+                <li>Lamb Shanks: Lower portion of the leg.</li>
+                <li>Ground Lamb: Made from minced lamb meat.</li>
+                <li>Lamb Liver: The liver portion of the lamb.</li>
+                <li>Lamb Kidney: The kidney portion of the lamb.</li>
+                <li>Lamb Heart: The heart portion of the lamb.</li>
+              </ul>
+            </div>
+
+            {/* Goat Card */}
+            <div className="bg-blue-50 border border-[#03468a]/20 p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-bold text-[#03468a] mb-3">Goat</h3>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                <li>Goat Carcasses: Whole goat, typically sold for further processing.</li>
+                <li>Goat 6-Way Cuts: Goat divided into six primary primal cuts.</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         {/* Info Cards */}

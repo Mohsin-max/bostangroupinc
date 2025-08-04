@@ -1,4 +1,5 @@
 "use client";
+import { Weight } from "lucide-react";
 import { useState } from "react";
 
 const beefProducts = [
@@ -36,6 +37,28 @@ const beefProducts = [
       { cut: "Lean (90/10)", weight: "1 lb", grade: "USDA Choice", price: "$6.99/lb" },
       { cut: "Medium (80/20)", weight: "1 lb", grade: "USDA Select", price: "$5.75/lb" },
       { cut: "Organic Grass-Fed", weight: "1 lb", grade: "USDA Organic", price: "$8.45/lb" },
+    ]
+  },
+
+  {
+    id: 5,
+    name: "Boneless Beef Cuts",
+    variants: [
+      { cut: "Boneless Beef Striploin: Lean and tender steak.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Ribeye: Well-marbled and flavorful steak.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Tenderloin: The most tender beef cut.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Sirloin: Versatile and flavorful steak.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Round (various cuts): Including Top Round, Bottom Round, Eye of Round.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Chuck (various cuts): Including Chuck Roast, Flat Iron Steak, Denver Steak.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Brisket: Popular for slow cooking and smoking.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Flank Steak: Flavorful and lean.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Skirt Steak: Thin and flavorful, good for grilling.", weight: "", grade: "", price: "" },
+      { cut: "Boneless Beef Short Ribs: Meaty and flavorful, ideal for braising.", weight: "", grade: "", price: "" },
+      { cut: "Ground Beef: Made from minced beef meat, various lean-to-fat ratios.", weight: "", grade: "", price: "" },
+      { cut: "Beef Liver: The liver portion of the beef.", weight: "", grade: "", price: "" },
+      { cut: "Beef Tongue: The tongue portion of the beef.", weight: "", grade: "", price: "" },
+      { cut: "Beef Oxtail: The tail portion of the beef, rich in flavor.", weight: "", grade: "", price: "" },
+      { cut: "Note: Some products can be sold with or without the skin, bones, or with various cuts and preparations.", weight: "", grade: "", price: "" },
     ]
   },
 ];
