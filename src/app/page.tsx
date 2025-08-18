@@ -198,7 +198,7 @@ export default function Home() {
   color: "#6b2d09"
 },
   {
-    id: "beef-list",
+    id: "beef",
     title: "Beef",
     desc: "Premium global sourcing with custom cuts",
     img: "./1.jpeg",
@@ -207,17 +207,17 @@ export default function Home() {
  
   
   {
-    id: "lamb-goat-list",
+    id: "lambgoat",
     title: "Lamb & Goat",
     desc: "Whole carcasses to specialty cuts",
     img: "./9e48a862-b8b2-4e04-8bc7-a9a0b1adbeae.jfif",
     color: "#4a148c"
   },
 
- 
+
 
   {
-    id: "seafood-list",
+    id: "seafood",
     title: "Seafood",
     desc: "Wild-caught & farmed options available",
     img: "./62075056-5420-42ca-95a9-31f1ad5362d0.jfif",
